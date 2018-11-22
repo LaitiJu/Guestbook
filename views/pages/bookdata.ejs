@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- header sisältö -->
+<header>
+    <meta charset="UTF-8">
+    <% include ../partials/header %>
+
+
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+</header>
+
+
+
+<!-- content sisältö -->
+<body class="content">
+
+
+
+    <content>
+
+  <% include ../partials/content1 %>
+<!-- taulukon muotoilu, paksut viivat siksi, kun tyhjiä rivejä -->
+
+      <style>
+table, th, td {
+    border: 1px solid black;
+padding: 10px;
+text-align: center;
+
+}
+</style>
+      <table style= "width: 50%">
+        <tr>
+          <th> Name </th>
+          <th> Age</th>
+          <th> Email </th>
+          <th> Comment </th>
+          <th> Company </th>
+          <th> Date </th>
+        </tr>
+<!-- Haetaan data ja tulostetaan sen sisältö -->
+<%   var results = "<table border= 5> ";
+      for (var i = 0; i < data.length; i++) {
+      %>
+
+      <tr>
+        <td><%= data[i].Name %></td>
+        <td><%= data[i].Age %></td>
+        <td><%= data[i].Email %></td>
+        <td><%= data[i].Comment %></td>
+        <td><%= data[i].Company %></td>
+        <td><%= data[i].Date %></td>
+      </tr>
+
+            <%}%>
+
+</table>
+
+  </content>
+
+
+
+<!-- footer sisältö -->
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+
+</html>

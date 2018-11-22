@@ -1,0 +1,40 @@
+
+
+<% var header="New heading" %>
+<% var content="New content" %>
+<% var footer="New footer" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- header sisältö -->
+<header>
+    <meta charset="UTF-8">
+    <% include ../partials/header %>
+
+<h1> <%=new_heading %> </h1>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+</header>
+
+
+
+<!-- content sisältö -->
+<body class="content">
+
+    <content>
+  <% include ../partials/lomake %>
+  </content>
+
+
+
+<!-- footer sisältö -->
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+
+</html>
